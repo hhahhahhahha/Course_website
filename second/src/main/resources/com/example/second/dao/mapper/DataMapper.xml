@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.second.dao.DataDao">
+    <select id="FindById" resultType="com.example.second.entity.Data">
+        select * from data where flag=#{id}
+    </select>
+    <update id="Update_data" parameterType="com.example.second.entity.Data">
+        update data
+        set id=#{id},
+            flag=#{flag},
+            data=#{data},
+            number=#{number}
+        where
+              id=#{id}
+    </update>
+</mapper>
