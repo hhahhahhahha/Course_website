@@ -1,0 +1,148 @@
+<template>
+  <el-container style="height: 100%;">
+
+    <!--    <el-container>-->
+    <!--      <el-header>Header</el-header>-->
+    <el-main>
+      <div data-v-39d61b84="" class="title">混合教学全过程管理</div>
+      <div data-v-39d61b84="" class="detail">课前、课中、课后，线上线下，教学场景全过程管理</div>
+
+      <div data-v-39d61b84="" class="list">
+        <ul data-v-39d61b84="">
+          <li data-v-39d61b84=""><div data-v-39d61b84="" class="headimg"><img data-v-39d61b84="" src="img/task.a6436aca.png" alt=""></div><div data-v-39d61b84="" class="title">作业</div><div data-v-39d61b84="" class="detail">81 种文档格式作业在线展示和批阅，实时查重，精准对比，避免学生抄袭。 自动管理成绩，一键下载作业数据。</div></li>
+          <li data-v-39d61b84="">
+            <div data-v-39d61b84="" class="headimg">
+              <img data-v-39d61b84="" src="data:image/png;base64,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" alt="">
+            </div>
+            <div data-v-39d61b84="" class="title">考试/练习</div>
+            <div data-v-39d61b84="" class="detail">单选、多选、填空、简答等10余种题型。支持题库随机抽题组卷。支持限时考试、选项随机等防作弊模式。
+            </div>
+          </li>
+          <li data-v-39d61b84=""><div data-v-39d61b84="" class="headimg"><img data-v-39d61b84="" src="../FirstHome/image/task.png" alt=""></div><div data-v-39d61b84="" class="title">课件资料</div><div data-v-39d61b84="" class="detail">课件、资料、话题、公告等教学内容支撑。在线制作方便快捷，提升备课效率。支持课前发布活动，课中互动，课后巩固。</div></li>
+          <li data-v-39d61b84=""><div data-v-39d61b84="" class="headimg"><img data-v-39d61b84="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAD30lEQVR4Xu2bSWgUQRSGvxrcEJeDuCEmKghxiQuCRBHXgx7cMHHfDgbEJB4EFRXxoGJUFA86QSGKEdFRMW4XL2LcBXENbghuEeNCwBWXaFoqPTPpzEwyna6W6XR3n4Z01ev/ffXeq65Kl6CRSwv2nA2BXWh0b6ydY+8JKqFmhcivONaQRpHohhZMK0QTaxzrmBVhQtsq8l+vje0aB0DbnVaNEC2sPMPxfTTtj1j+uqVRZz0A2p50zfFO2CBQFLyK+h394eqRj4VmiIRaAK7M+WSREq4JOgCPhH5cASx4JUTtVKcFQsmAufK+qJkjtGD622Y7z6uOiqBSeDX8I+x8AH4EeHQG8FMgTMCvAX4NSEUN6JQBc86rzeLf3kFJlpoN4P+kgHQwuxROz4UP92NECsh/oSy81sCvr1CcqWTr/wCQkvJf1gl7GIKy8P5K5iIYvVFJdL3OwV5KtuwHkDYGppTEi4oIHVYAWSuVRDsXwJL70KZjvHOlM6Hylv531wIwhrxWAyezIecUvLkGZ+bXQXElgGXPIBDeartXDNc26w7nPYeiPvUjwnUARq6FoUt1J68Xwt19jee36wBEQv/7Bzg4PHlxcxWAfrNg/Hbd6WBvubnmMQC5D6B1B5BFLzbXG0LhqgiIhP+j43BxdfLRr50G8yDLZFszFlP6IhQBULYOHh4xIxc6psOCS+bammnlCABXNsKDA2bk6m3kQkiuF1Sv0ESoeqpkRe1VOBIBFVfh7IKmCQm0gq5DIOG/Z5OYqv4BH8ub9rwGWqsBmFwCz87A01JbxKTCiBqAVCg2PjMjB/pOhXOLLCuxD0CXQdCirQUhGry/C39/N63v1MPQc1T4HcT6klgdgB27O9INWcxkUTN7Dc6FUesdAMC4CjQrvqF2h8fCZ8NGSmP2Bi6EMZtcBuDGdrhTZA7jhJ2Qke0yADd3wO095gDkvQAh4NcXKB5krk+CVuo1wM4UMA3AsLF6YRU8OeExAItvQrtuyuEvDTS/CJALKbmgktedfXCj0PLoNw8AMteL5F4DMG4b9J+t//5bDXv7KjnvfADTj0KPEXBimr7BKgJ1DiuuAiOGnJsC3YfDjOPxI/zzE+wfojzyzgeQaHY5uxAqrtjmvPNS4PIGKD+kOzh2CwyYZ3vIx9JTT4Hccmjd3p5RSbSx2jkTpoegNAeqHtvzHIMVdQDSmHFetioxNAmqnljtbbmfPQAsPz71HX0A/icyqfhEJvWRH1Xgp4CfAp5PAc9/Lu/1AxOyHHq1DsjTY/6hqciE6Oljc1EIHpkREh6c9EQkJDs6G4Xg5cPTxtd0Lxyf/wcHk7hgHuJwKwAAAABJRU5ErkJggg==" alt=""></div><div data-v-39d61b84="" class="title">课中互动</div><div data-v-39d61b84="" class="detail">课件在线讲解、标记疑问 支持发言、开启弹幕、抢答、提问、话题讨论、黑板、画笔标注课堂要点，让课堂更精彩</div></li>
+          <li data-v-39d61b84=""><div data-v-39d61b84="" class="headimg"><img data-v-39d61b84="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAC5ElEQVR4Xu2bz2sTQRTHP+OPboRWS6VCvEiPgnpRsFA92AqSePSgf4M3b/oX6M2bd2968GhChbQHEX/fBI9FkAYEi0LBpLUd2eZHJ8ludnZmY3ezk1NgZ96893nffTOb7BMM+cjKxG0Qj4HisHEpvlYHeU+Ut56H+SiCLshq4SFS3k9xYPFdE+KRKDUe9E8cACAr3jZwJP4KmZjxV5SbR1VPewDIiiczEYalk6Lc7Mbd/TLmme9H1lXCHoCxvOejVNKuCS0AOZH+QAEsN4Vob3XPooCN53V5R8iKt57hfd42L3UfQC4qf+hByAFwCnC3gKsBtqU0y/NHswtcrsHMAmy8gfdLZnySsKGx8mgAlBr7S1cLGm4EDEnChsbKDoD1OeDMXTi5CELA51st5kHZu/hCIx9E25ASfq7Atyd69iJGWShAQOlPr/mVOWjW4doaFIrQqMPqHHhFWFzTcziOjeox/1FOz27IKHMAS+swMdNrdqcBr6YHl7rxGw55eo7GsbG1AbXTenYTB6DKXDUud+Dddfj1FqbnYb4G4nA8J+PYMC2ybY/MFRAGIF6o9qMdAMNt1imgRcD8FrAXbyosOADGByFXBJXz/kGK2e0Cbhew0p95EXQ1YIQ14PtTmC2DNxud3bGrAa8vweaXwcfqMBRjBUANfuoCXPmQIwWowU+eg6ufooP3R6RaAcsnYLcJCx/h+PnwgEyDTz0ANTthEGyCTz2A3W1YntrPfD8E2+BTD8B3MAxCEsFnAkAQhMmzsPm1pYw4BS+oiqS6CKoO9yshieAzo4AOCBWCbeY7NjOjAL1dPf4oB8A9DsdXjTLDPQ4b/yZ46ibo/uFplaMhk/0/Y3+8tLJurgB/2YOEkEDwfgh2AKzYp2OyA2BcA9KRQGsvnAKcAtyrsrl/XX6vNzC/DRN+Gc1rHfC7x1zTVGcjzXXbnALB7q1D62PJ/zEQ2DiZEyUMb53tQshz87Qqwjy0z/8Du8aWUrBhHXYAAAAASUVORK5CYII=" alt=""></div><div data-v-39d61b84="" class="title">考勤签到</div><div data-v-39d61b84="" class="detail">二维码、数字口令、GPS等5种考勤形式， 精准有效、避免代签 签到数据自动生成，一键导出</div></li>
+          <li data-v-39d61b84=""><div data-v-39d61b84="" class="headimg"><img data-v-39d61b84="" src="data:image/png;base64,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" alt=""></div><div data-v-39d61b84="" class="title">成绩管理</div><div data-v-39d61b84="" class="detail">汇总互动数据、平时成绩、期末成绩 个性化配置成绩权重占比数据报表一键导出下载，课留存，可追溯</div></li>
+          <li data-v-39d61b84=""><div data-v-39d61b84="" class="headimg"><img data-v-39d61b84="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAMrklEQVR4Xu1da3BU5Rl+3pNNdpPdQARSWqsVlMZRwNYJrVMRNJtSf2i9oijUERwvnU6rLeAlCVdhN+USFMeZjugAjo2XgRqtUq2aBUGlDtCiEFuhKGp/KLcJZpPsbnbP2/k2QyaXPXvL7uZkz3t+JbPf+d73fZ7nvN/9HEKWr2netnKbXjBd0yITAarQGRcCNJrApSAqBbM9yy6Yu3qiIJjbGNQG8EmN8CnAh3S9oCWsRXbuqi09ns0AKBuVV9W3V2rMs1nHDCZMIiArdrLhu5nqZICJcZA0vK0TPb+9xrkv0/5ljJipq46XOsLF9zJhHhgTM+2o1Af1GLUQY1PA1rnh/YfL2zKByaAFcNVSLtOKOh4A+H4AozLhlNSREIFTAD2hh0rW71hOrQlLxykwCAEwuT3tdzKwmoDywTgh96aHAAPHCXjIV+d8FiBOp5a0BOBe0XoBaYWbGXxFOkblnswiQKD3WO+a61tcdiTVmlMWgLu+7Rbo9DSAkakak/JZReA0kXZ3c23J1lSsJC8AZnJ729eAaD6Yk78vFW+k7OAQIGIwr/PVOh+E+juJKykiK5/iwrKTnZuY9TlJ1ClFhhgBIq2x9WjxvH0bqCuRKwkFECX/REcTg69JVJn8bh4ECLStdUzJjfvuiy+C+AJgpur6zufkyTcPsal4ojJBc03xHfGag7gCcHv8awEsSMWolDUdAg2+OtdCI68MBRDt7bP2knT4TEdoag6pziDps3w1pVti3RhTAGqcD82m5p1lqJca3GYtfRp6uDLWPEEMATBVezp2yiSPWblMzy81WdRcVzK9/4zhAAG4vX61mLMxPTNyl6kRINzlq3Vt6u1jHwGohR0qaj8kc/umpjFt59TaAYecFb0XkPoIwO1pXwrwsrQtyI3DAAFa5qtzLj/jaI8A1Hq+PVx8VJZ0hwGHg3PxVNDWOe7MfoIeAVR7/AsYUON+ufIcAQIWNte5GlSYPQJwe/wtAC7O89glvG7WW3y1rkk9AlB7+EjnvYKOdRBgjaaoPYbRDFDt9TcwY751wpdIibCuuda1ICoA90r/xyBMFlgshADjgG+R6xKK7ttn+ka2bluIfABqy3mYeCxVrey4mUhPaRuRtaDK32iZtZlU7W1bwkw9EwP5G65E1h8BIl5Kbo+/EcBsgcd6CBChkao8/j0ETLFe+BIxA3vV4Y7PAR4ncFgRATqqmgB1+nSMFcOXmHFC7fUPWP6ItlWVQBRUGSCpAwRWxSjf4xYB5DvDCeLLuQBsGjD3ykJc++NClBYnPJdiCXraOhmv7+/C5ne7ENZzG3LOBXB3VSFu/1lRbqMcJtZe2B3CM9sTnubKaDQ5F8ArfyiRJ9+AQpUJbnisI6MEJ6pMBJAIoRz+bgkBSBNgrChLNAHSCRwoAEt1AnOYUcVUEgjkvA+QhE9SJIcIiAByCLYZTYkAzMhKDn0SAeQQbDOaEgGYkZUc+mQaATTXOnMY9tCbqva2D70T6pCQWZaDRQBDowcRwNDgDskA/YCXDDA0SpQMMDS4Swboj3u+ZIC3DnShaU8YHSHG1IoC3DmtCPbCgRtfpAnIwyZg444QGj/ou6Hj55MKUHOdY0CeEQHkmQCe3h7Ei7vDA4gmAl6dXwKnvW8WEAHkiQCYGU/5Qtjy4UDyz4TY9PsSjCgRAcTtbg3HPoAi/0/vhPCXPcbkX3qehrVziqUJSNTZHm4CUOQ/+XYIr+w1Jv/sswjr5jhQPkITAeSTABT56/8ewmv/NCb/+6O6yR9TOpB8hYX0AYZpH0BnxuNvhLBtvzH5544iNMxxYLQB+SKAGOlgODQBivyGbSG8+bEx+eeNJqyd48AoV+wn/0zokgGGWQbQdcaabUG8dSBi2JqNG6PIL8ZZzsQnnkQAWRBARGc8u6sL2/7VhXAEuPIiG+5xF6HUkZiQeH0UVe+q14JobjEm//zvENbMLkZZv+GeUb0igAwLIBhmrGgKYPfhvofrxo4g1F5vx6RzCxL1Q2P+rsiv/2sQ2z8xJn/C2G7yR6Rw1lEEkEEBtAcZi7cE8NGXsU9WagTcOa0Qsy8vhKb+SfIKRxieV4PY+R9j8iu+q2H17Y6Uj7uJADIkgNYOxiMvBnD468THan/0Aw0119ljjsv7a0KRv6IpiPcOGZN/4fe6yXel0cSIADIggGPf6njohQC+Opn8Oy5GFAMLr7FjaoXNMA90RRiPvhzEB4eNyb/obA2rbnPAmQb5MgzMwDDwq5Pd5B/7Nnnye5u9vtKGX1cXocjWt0kIhRnLXg7gw/8aZ5SJ52ion+UYsMCTZMsSLSYZYBAZ4PDXkWjab41zkrpAAyIJWoXx5YRFNzgwrrx7zK7IX7I1gD2fGd84+VwN3lkOlBQl35eIJQwRQJoC+OjLCBZtCaAjaPy8XX1J90aM1a8Hsf+L+Cqw24DfzCjCjEk2LN4awL7PjcurPoTnVgeKB0m+ZIA0m4Ddh8N4tCmIkPFEHGb+tDu1ExHU5M0Lu7uicwOJssEoJ+FUu3Fzolb1Vt7qgCPG7p5UUr/MBBqglWgq+J2DXVj9eigukfOuLMSvpg58/UzL/yLwvhrE16fT6y9UjtewYqYj5taudMiXDJBiBnhlbxeefCukXnEe81Kt8e+uLsL1lYWGfPgDjMfeCGLHv4179rFu/sn5Gh6d6RjQWUyXeMkAKWaA53aFsHmX8YuTVGfvkV8WwT3RmPzeJt/Y3xVdxw8k8S6myyZoWHZT5smXDJBkBmh8P4SN7xozpTpwS2+y47IJxmP6WHr78qSOlU0BHDlm3CRc/sMCLLnJjsKCwfX2jTKFjAISjAJUyr55fUd0USfW5bQj2iOfnOYcvxrybfCF0BRjR88VFQVYfKMdtiyRLxkgiQxw5FgE9z4TiEm+Wm794212TBib3gJP70r/cTiMx98M4XgbR7+hd+2lNvz2F0VZJV8EkIQAAiHGrCc74O+ngbEjKTr/fs6o+BsuUumkqRU/NbNY5tSSXs5Npf5YZaUJSNAEqJ/V0K/hb6Gecb9ac/feGnuT5WAJyfX9IoAkBKCKqAWfj76IYGQJoXJ8AQpSWM7NNamp2BMBJCmAVEAdTmVFACIAU+hVjocPEQ2SAYYIeDHbFwHTZAAhZmgQEAEMDe6msSoCMA0VQ+OICGBocDeNVRGAaagYGkdyLgD5YMRAoi31wQj5ZIzxk26JT8bIV8OMBWCJj0aJACwuAGkCLN4ESCfQ4p3AoRnsiFUjBHI+DBQqzIUAub3tATDbzeWWeJMTBIiCKgMcBzAmJwbFiNkQOEFVnvbPCDzebJ6JP9lHgEGfU5XHv4eAKdk3JxbMhgADe6na6/8zM+aYzTnxJ/sIEKGRqr1tS5hpefbNiQWzIUDES6lqZcfNRPpWszkn/mQfAWZtJk3ztpXbmL4hRI/GyWURBBjgMPHYKOnulf6PQZhskdglTIUA44BvkeuSqACqvf4GZswXZKyDABHWNde6FkQFUFXfXkk677VO+BIpazRle41zX0+77/b6D4IxUaCxAAKEFl+ta5KKtEcA1R7/AgbWWiB8y4dIwMLmOldDHwFMXXW81B4uPgpglOURym8ATgVtnePef7i8rY8AoqMBT/tSgJfld/xWj46W+eqcPRN/fcb+Vy3lMipqP0RAudVhysf4GTjOIWfFjuXUeia+AZM/bo9/LoBN+QiAxIR5vjrX5t44xJj9Y6r2dOxk8BUCWP4gQKD3mutKpgPU5+WIMad/3StaL4Bm2wdgZP5AYOlITkMPV/oWlx3pj4Lh/L+7vu0WsPYSmGWNYDhrh4hB+ixfTemWWGHEJdft8at5gQXDOX7xHQ2+OtdCIxziP93MVF3f+RyzLhtGhqGSiLTG5priO6CygMGVML1XPsWFZSc6mhh8zTDEwLIuE2hb65iSG/fdR3Hfi55QAArBqAhOdm6STDA89KSe/NbRxfMSkT9gJjBueMzqDMEaEM2XjqFJhaBSPfM6X63zwXhpP8E8QPzgoqMDnZ6WIaLpRHAaGt9j1NtPuw8Q60Y1T0Ba4WaZLDKHCNQkD+tdc2ON8xN5mFQfIHYl0SZhLjNWydpBIpiz87ua2yfCw75a5+b+M3zJWhyEALpNqAUkrajjAYDvl6XkZGEfdLlTAD2hh0rW917YSafWQQvgjFG1n8ARLr6XgbsAXJyOM3JPQgQ+IWBjwNa54cx6fsI7EhTImAB621F7DDXm2axjBhMmyZbz9GhSW7eJcZA0vK0TPa/28KVXk/FdWRFAb3PRcwd6wXRNi0xkpgsZqCDQGIBdICq1/NF0oiCY2wDyM/gEAYeI+FNdL2gJa5Gdu2pL1entrF3/B/4vJSi3vITcAAAAAElFTkSuQmCC" alt=""></div><div data-v-39d61b84="" class="title">教学数据分析</div><div data-v-39d61b84="" class="detail">全方位教学数据信息化，可视化实时监测教学质量，把控教学进度，学业预警分析，提升教学效果</div></li>
+          <li data-v-39d61b84=""><div data-v-39d61b84="" class="headimg"><img data-v-39d61b84="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADMklEQVR4Xu2bz0sbQRTHv6NtNlIjFaIn/QdEkNaDBw8eArahENez4NVLWkQUPKQgFO/iFsR/Qhep2HrzH2gvehM8eDPpL6LWqM2UWbohm+xmdzPZzeyP3MK+efPeZ968mZ2dR+Did5XLvSCEfAAhb1w080+U0kNK6fvhg4NvTjslTgRLsvyZAq+cyIoiQ4AvaVV9bWdPSwAlWd6mwFs7JSI/J4CSVtV3VjZaAijK8j2ApyI758K2hyFVTZjJNwGg2axUkqQ7F8oDI5quVJLk6KhSb3ATgKIs08B41IahQ6pq8NnwJ2Rhb4XHMB1qAK5kWSFAvg2ogWtCgY/Dqqol9xqAsId+4yjpU0EDEMR1njfs9H2CBiBqo6/DY1FAtO1tT89XXqJBbE+r1ZekODf3Sdi9vddUKT0kUQ1/nW0MII6AkG997dJIPAXiKRBPgXC//nqaA56MjeH55qZdH9zP/xwf42Znh1uP6YkQTw5I7+97YpSZ0tL8vGVfz5aWcLO725YtXKuACAD683kkMxm0AtSKTMcBPF5e4lpRUC2X0ZfLoS+bbWtkGhuZOdi/vIzkzIwmKgSAX4UCHs/OjLYTgvTeHjeERgdTq6uQpqdrersO4OH8HL/X1kwd7R0dxeD2NheEegdT6+uQpqYM+roO4PviImi5bOkkb77QHRwoFJCYnGzqp+sA7AzoBICBjQ0kJiZMIdv1bzUyHUuCP1dW8PfiwrMIuD89RWJ83FJ/1wFUb2/xY2HB1EApk0Eq7+2Je9cBMM/vTk5wvbVlgNA7MoJBReFKgE4aCwFAN5SBYAkxOTsLkjD9JunEJ1cyQgFwZXmHhGMALd4VfN0Kd2hAm9QIvwp45biul4W40PsAPwCwPoTdCfoFgPUj5LuAnwA0CKK9DfoNgPUn3HmAlxCs1nnhToS8giDkmWDkT4W9Gm0/9XKdB/hpqFd9xQB4Pox4NSp+6o0jII6AyH8ej/o1uchflGQZN6p5QLsqywBE/rJ0FKPAcF3+fxQEvkLM6QaqvpIsLplppBb2hNiyaIrBiHzZnB4RIasgc144WT8lwlBJVl8hZpYk4+Jpp0sHkwtj+fw/WWuptDvs/EMAAAAASUVORK5CYII=" alt=""></div><div data-v-39d61b84="" class="title">直播-云录屏</div><div data-v-39d61b84="" class="detail">满足线上线下混合式教学场景 动画及课件同屏+语音实现轻量级直播 不限人员数量，手机电脑均可参与</div></li>
+
+        </ul>
+      </div>
+      <div data-v-d375039e="" class="clever"><div data-v-d375039e=""><div data-v-d375039e="" class="title">智能备课</div><div data-v-d375039e="" class="detail">沉淀教学资源，提升教学效率，促进教师成长</div></div><div data-v-d375039e=""><div data-v-d375039e="" class="stitle"><img data-v-d375039e="" src="data:image/png;base64,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" alt=""><div data-v-d375039e="" class="lastTitle">资源管理</div></div><div data-v-d375039e="" class="lastDetail">教学资源结构化，管理更高效 题库、试卷库等7类教学资源在线制作 一键分享下载导出，沉淀教学资源</div></div><div data-v-d375039e=""><div data-v-d375039e="" class="stitle"><img data-v-d375039e="" src="data:image/png;base64,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" alt=""><div data-v-d375039e="" class="lastTitle">协同备课</div></div><div data-v-d375039e="" class="lastDetail">支持个人或小组协同备课，资源共享 有效提升备课效率，助力教师成长 专业备课，教学资源利用最大化</div></div></div>
+    </el-main>
+
+    <!--    </el-container>-->
+  </el-container>
+</template>
+
+<script>
+export default {
+  name: "build"
+}
+</script>
+
+<style scoped>
+.detail[data-v-39d61b84] {
+  height: 32px;
+  font-size: 20px;
+  color: #74787c;
+  margin-top: 50px;
+  text-align: center;
+}
+.title[data-v-39d61b84] {
+  font-size: 40px;
+  font-weight: 500;
+  color: #1f2023;
+  margin-top: 50px;
+  text-align: center;
+}
+.list[data-v-39d61b84] {
+  padding: 0;
+}
+ul[data-v-39d61b84] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+li[data-v-39d61b84] {
+  height: 320px;
+  text-align: center;
+  width: 288px;
+  background: linear-gradient(
+      180deg
+      ,#fff,#f4f8ff 130%);
+  border-radius: 8px 8px 0 8px;
+  margin-top: 24px;
+  padding: 40px 24px;
+}
+.headimg[data-v-39d61b84] {
+  width: 64px;
+  margin: 0 auto;
+  height: 64px;
+  margin-bottom: 24px;
+}
+.title[data-v-39d61b84] {
+  font-weight: 600;
+  color: #1f2023;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.detail[data-v-39d61b84] {
+  font-size: 14px;
+  color: #74787c;
+  line-height: 24px;
+}
+img[data-v-39d61b84] {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.clever[data-v-d375039e] {
+  width: 1224px;
+  height: 150px;
+  background: #4285f4;
+  border-radius: 8px;
+  display: flex;
+  padding: 57px 70px;
+  margin-top: 64px;
+}
+.clever .title[data-v-d375039e] {
+  text-align: left;
+  color: #fff;
+  line-height: 48px;
+  font-weight: 500;
+  font-size: 40px;
+}
+.clever .detail[data-v-d375039e] {
+   text-align: left;
+   color: #fff;
+   line-height: 32px;
+   font-size: 20px;
+   width: 414px;
+   margin-top: 24px;
+ }
+.clever .stitle[data-v-d375039e] {
+  display: flex;
+  color: #fff;
+  line-height: 36px;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.clever .lastDetail[data-v-d375039e] {
+  padding-left: 56px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: .8;
+}
+.clever .stitle img[data-v-d375039e] {
+  width: 40px;
+  height: 40px;
+}
+.clever .stitle .lastTitle[data-v-d375039e] {
+  margin-left: 16px;
+}
+</style>

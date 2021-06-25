@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.second.dao.ClassesDao">
+    <resultMap id="BaseResultMap" type="com.example.second.entity.Classes">
+        <id column="uid" property="uid" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        uid, name
+    </sql>
+
+    <select id="findAllClassess" resultType="com.example.second.entity.Classes">
+        select * from classes
+    </select>
+
+    <select id="findClassesByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from classes where name = #{name,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteClassessByIds">
+        delete from classes where uid in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getCountClassess" resultType="java.lang.Integer">
+        select count(uid) as count from classes
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from classes
+        where uid = #{uid,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteClassesById" parameterType="java.lang.Long">
+        delete from classes
+        where uid = #{uid,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.second.entity.Classes">
+        insert into classes (uid, name, age,
+        sex)
+        values (#{uid,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER},
+        #{sex,jdbcType=VARCHAR})
+    </insert>
+    <insert id="addClasses" parameterType="com.example.second.entity.Classes">
+        insert into classes
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                uid,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                #{uid,jdbcType=BIGINT},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateClasses" parameterType="com.example.second.entity.Classes">
+        update classes
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where uid = #{uid,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.example.second.entity.Classes">
+        update classes
+        set name = #{name,jdbcType=VARCHAR},
+        where uid = #{uid,jdbcType=BIGINT}
+    </update>
+</mapper>

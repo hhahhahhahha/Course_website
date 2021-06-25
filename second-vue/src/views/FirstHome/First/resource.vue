@@ -4,9 +4,8 @@
     <div style="height: 4px; background-color:#7591f3" >
     </div>
     <div style="height: 100px">
-<!--      <p1>{{msg}}</p1>-->
       <p v-if="msg==''" style="font-size: 10px">暂无课程资源</p>
-      <p v-for="m in msg" style="font-size: 10px" v-if="m.index==1">{{m.data}}</p>
+      <p v-for="m in msg" style="font-size: 10px" >{{m.data}}</p>
     </div>
     <el-footer style="height: 1px;background-color: #7591f3" >
     </el-footer>

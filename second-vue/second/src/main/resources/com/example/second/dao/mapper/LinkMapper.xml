@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.second.dao.LinkDao">
+    <resultMap id="BaseResultMap" type="com.example.second.entity.Link">
+        <id column="uid" property="uid" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        uid, name, content
+    </sql>
+
+    <select id="FindById" resultType="com.example.second.entity.Link">
+        select * from link where id=#{id}
+    </select>
+    <select id="findAllLinks" resultType="com.example.second.entity.Link">
+        select * from link
+    </select>
+
+    <select id="findLinkByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from link where name = #{name,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteLinksByIds">
+        delete from link where uid in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getCountLinks" resultType="java.lang.Integer">
+        select count(uid) as count from link
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from link
+        where uid = #{uid,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteLinkById" parameterType="java.lang.Long">
+        delete from link
+        where uid = #{uid,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.second.entity.Link">
+        insert into link (uid, name, age,
+                            sex)
+        values (#{uid,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER},
+                #{sex,jdbcType=VARCHAR})
+    </insert>
+    <insert id="addLink" parameterType="com.example.second.entity.Link">
+        insert into link
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                uid,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                #{uid,jdbcType=BIGINT},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateLink" parameterType="com.example.second.entity.Link">
+        update link
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where uid = #{uid,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.example.second.entity.Link">
+        update link
+        set name = #{name,jdbcType=VARCHAR},
+            content = #{content,jdbcType=VARCHAR}
+        where uid = #{uid,jdbcType=BIGINT}
+    </update>
+</mapper>

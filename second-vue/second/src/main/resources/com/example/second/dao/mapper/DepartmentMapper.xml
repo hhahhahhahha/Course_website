@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.second.dao.DepartmentDao">
+    <resultMap id="BaseResultMap" type="com.example.second.entity.Department">
+        <id column="uid" property="uid" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="majorsnum" property="majorsnum" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        uid, name, majorsnum
+    </sql>
+
+    <select id="FindById" resultType="com.example.second.entity.Department">
+        select * from department where id=#{id}
+    </select>
+    <select id="findAllDepartments" resultType="com.example.second.entity.Department">
+        select * from department
+    </select>
+
+    <select id="findDepartmentByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from department where name = #{name,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteDepartmentsByIds">
+        delete from department where uid in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getCountDepartments" resultType="java.lang.Integer">
+        select count(uid) as count from department
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from department
+        where uid = #{uid,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteDepartmentById" parameterType="java.lang.Long">
+        delete from department
+        where uid = #{uid,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.second.entity.Department">
+        insert into department (uid, name, age,
+        sex)
+        values (#{uid,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER},
+        #{sex,jdbcType=VARCHAR})
+    </insert>
+    <insert id="addDepartment" parameterType="com.example.second.entity.Department">
+        insert into department
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                uid,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="majorsnum != null">
+                majorsnum,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                #{uid,jdbcType=BIGINT},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="majorsnum != null">
+                #{majorsnum,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateDepartment" parameterType="com.example.second.entity.Department">
+        update department
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="majorsnum != null">
+                majorsnum = #{majorsnum,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where uid = #{uid,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.example.second.entity.Department">
+        update department
+        set name = #{name,jdbcType=VARCHAR},
+        majorsnum = #{majorsnum,jdbcType=VARCHAR}
+        where uid = #{uid,jdbcType=BIGINT}
+    </update>
+</mapper>

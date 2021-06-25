@@ -12,6 +12,17 @@ import controlTeacher from "@/views/Home/teacherTeam/controlTeacher";
 import controlgonggao from "@/views/Home/First/controlgonggao";
 import controlkecheng from "@/views/Home/First/controlkecheng";
 import controlresource from "@/views/Home/First/controlresource";
+import libo from "@/views/FirstHome/introduce/libo";
+import yxh from "@/views/FirstHome/introduce/yxh";
+import ly from "@/views/FirstHome/introduce/ly";
+import conduct from "@/views/FirstHome/introduce/conduct";
+import accounting from "@/views/FirstHome/introduce/accounting";
+import Java from "@/views/FirstHome/introduce/Java";
+import dynamic from "@/views/FirstHome/dynamic/dynamic";
+import build from "@/views/FirstHome/build/build";
+import question from "@/views/FirstHome/question/question";
+import research from "@/views/FirstHome/research/research";
+import resourse from "@/views/FirstHome/resource/resourse";
 
 Vue.use(VueRouter);
 
@@ -30,7 +41,7 @@ const routes = [
   },
   {
     path: '/home',
-    component: resolve=> require(['../views/Home.vue'],resolve),
+    component: Home,
     children: [
       {
         path: 'teacherTeam',
@@ -71,6 +82,44 @@ const routes = [
         name:'introduce',
         component: introduce,
         hidden:true,
+        children:[
+          {
+            path:'Java',
+            name:'Java',
+            component: Java,
+            hidden:true,
+          },
+          {
+            path:'accounting',
+            name:'accounting',
+            component: accounting,
+            hidden:true,
+          },
+          {
+            path:'conduct',
+            name:'conduct',
+            component: conduct,
+            hidden:true,
+          },
+          {
+            path:'ly',
+            name:'ly',
+            component: ly,
+            hidden:true,
+          },
+          {
+            path:'yxh',
+            name:'yxh',
+            component: yxh,
+            hidden:true,
+          },
+          {
+            path:'libo',
+            name:'libo',
+            component: libo,
+            hidden:true,
+          },
+        ]
       },
       {
         path: 'teacherTeam',
@@ -85,7 +134,37 @@ const routes = [
             hidden:true,
           },
         ]
-      }
+      },
+      {
+        path:'dynamic',
+        name:'dynamic',
+        component: dynamic,
+        hidden:true,
+      },
+      {
+        path: 'build',
+        name: 'build',
+        component: build,
+        hidden: true,
+      },
+      {
+        path: 'question',
+        name: 'question',
+        component: question,
+        hidden: true,
+      },
+      {
+        path: 'research',
+        name: 'research',
+        component: research,
+        hidden: true,
+      },
+      {
+        path:'resourse',
+        name:'resourse',
+        component: resourse,
+        hidden:true,
+      },
     ]
   },
 ]

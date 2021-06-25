@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.second.dao.TeamDao">
+    <select id="FindById" resultType="com.example.second.entity.Team">
+        select * from team where id=#{id}
+    </select>
+    <update id="Update_team" parameterType="com.example.second.entity.Team">
+        update team set id=#{id},team=#{team} where id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,40 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.second.dao.TeacherDao">
+    <select id="findById" resultType="com.example.second.entity.Teacher">
+        select * from teacherdata where id=#{id}
+    </select>
+    <update id="save" parameterType="com.example.second.entity.Teacher" >
+        update teacherdata set id=#{id},
+                               name=#{name},
+                               number=#{number},
+                               major=#{major},
+                               job_title=#{job_title},
+                               email=#{email}
+        where id=#{id}
+    </update>
+    <insert id="add" parameterType="com.example.second.entity.Teacher"  useGeneratedKeys="true" keyProperty="id">
+        insert into teacherdata(
+            id,
+            name,
+            number,
+            major,
+            job_title,
+            email
+        )values(
+            #{id},
+            #{name},
+            #{number},
+            #{major},
+            #{job_title},
+            #{email}
+        )
+    </insert>
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from teacherdata where id=#{id}
+    </delete>
+    <select id="findAllTeachers" resultType="com.example.second.entity.Teacher">
+        select * from teacherdata
+    </select>
+</mapper>

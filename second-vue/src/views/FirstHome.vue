@@ -18,26 +18,23 @@
         </el-input>
       </div>
       <div class="button-location">
-<!--        <el-row >-->
-          <el-button  style="width:80px" @click="currents('/first')">首页</el-button>
-          <el-button  style="margin-right:0px;" @click="currents('/introduce')">课程介绍</el-button>
-          <el-button  style="margin-right:0px;" @click="currents('/teacherTeam')">教学团队</el-button>
-          <el-button  style="margin-right:0px;">课程建设</el-button>
-          <el-button  style="margin-right:0px;">课程资源</el-button>
-          <el-button  style="margin-right:0px;">问题与答题</el-button>
-          <el-button  style="margin-right:0px;">课程研究</el-button>
-<!--        </el-row>-->
+        <el-button  style="width:80px" @click="currents('/first')">首页</el-button>
+        <el-button  style="margin-right:0px;" @click="currents('/introduce')">课程介绍</el-button>
+        <el-button  style="margin-right:0px;" @click="currents('/teacherTeam')">教学团队</el-button>
+        <el-button  style="margin-right:0px;" @click="currents('/build')">课程建设</el-button>
+        <el-button  style="margin-right:0px;" @click="currents('/resourse')">课程资源</el-button>
+        <el-button  style="margin-right:0px;" @click="currents('/question')">问题与答题</el-button>
+        <el-button  style="margin-right:0px;" @click="currents('/research')">课程研究</el-button>
       </div>
     </div>
-<!--    </el-header>-->
     <el-main class="view-styles">
-<!--      <component :is=current ></component>-->
       <div v-if="this.$router.currentRoute.path === '/'">数据结构精品课程</div>
       <router-view></router-view>
     </el-main>
     <el-footer class="footer-styles">
-      <div >项目参与者：陈勇</div>
-      <div >联系电话：6666666</div>
+      <div>地址：重庆    邮编：406213</div>
+      <div >项目参与者：ywb</div>
+      <div >联系电话：909090</div>
     </el-footer>
   </el-container>
 </template>
@@ -68,7 +65,7 @@ export default {
 
 <style scoped>
   .home-header {
-    background-color: rgba(128, 23, 23, 0.73);
+    background-color: rgba(23, 40, 128, 0.73);
     position: relative;
     height: 250px;
     /*line-height: 60px;*/
@@ -85,14 +82,14 @@ export default {
     font-size: 20px;
     font-family: 华文楷体;
     width: 170px;
-    background-color: #6f2f2f;
+    background-color: rgba(23, 40, 128, 0.73);
     margin-top: 0px;
     margin-left: 200px;
   }
   .login-location{
     /*position: absolute;*/
     margin-left: 1320px;
-    margin-top: 15px;
+    margin-top: 0px;
   }
   .login-style {
     cursor: pointer;
@@ -103,26 +100,17 @@ export default {
   .button-location{
     margin-left: 400px;
     font-size: 0px;
-    /*position:absolute;*/
     bottom: 0px;
-    /*width: 0px;*/
   }
   .view-styles{
-    margin-left: 400px;
-    margin-right: 400px;
     background-color: rgba(248, 255, 254, 0.95);
-    height: 420px;
+    height: auto;
+    min-height: 420px;
     /*display: flex;*/
     /*margin-left: 10px;*/
   }
   .footer-styles{
-    /*display: flex;*/
-    background-color: rgba(128, 23, 23, 0.73);
-    /*position: absolute;*/
-    /*bottom: 100px;*/
+    background-color: rgba(23, 40, 128, 0.73);
     text-align: center;
-    /*margin-bottom: 0px;*/
-    /*height: 300px;*/
-    /*line-height: 0px;*/
   }
 </style>
